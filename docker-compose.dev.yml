@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  simulator:
+    build:
+      context: ./vendor
+    command: npm start
+    container_name: democratizingdata_wdc_simulator
+    ports:
+      - 8888:8888
