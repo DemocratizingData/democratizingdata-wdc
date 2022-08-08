@@ -3,20 +3,6 @@
 
   myConnector.getSchema = function (schemaCallback) {
     $.getJSON("tableSchema.json", function (tableSchema) {
-      tableSchema.forEach(
-        (schema) => {
-          schema.columns.forEach(
-            (column) => {
-              let finalType;
-              switch(column.dataType) {
-                case "integer": finalType = tableau.dataTypeEnum.integer; break;
-                case "string": finalType = tableau.dataTypeEnum.string; break;
-                case "number": finalType = tableau.dataTypeEnum.float; break;
-              }
-            }
-          )
-        }
-      );
       schemaCallback(tableSchema);
     }); 
   };

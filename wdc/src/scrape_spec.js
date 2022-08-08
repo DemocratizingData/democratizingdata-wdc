@@ -7,10 +7,11 @@ var endpoints = ["/topics", "/publications"]
 
 
 function tableauDataType(dataType) {
-  switch(column.dataType) {
+  switch(dataType) {
     case "integer": return "int";
     case "string": return "string";
     case "number": return "float";
+    default: return null;
   }
 }
 
@@ -29,7 +30,8 @@ function parseSpec(spec, endpoints) {
           key => ({
             id: key,
             alias: spec_columns[key].title,
-            dataType: spec_columns[key].type
+            dataType: tableauDataType(spec_columns[key].type),
+            description: spec_columns[key].description
           })
         )
       }
