@@ -7,3 +7,12 @@ services:
     container_name: democratizingdata_wdc_simulator
     ports:
       - 8888:8888
+  wdc:
+    build:
+      context: ./wdc
+    command: npm start
+    container_name: democratizingdata_wdc_
+    ports:
+      - 8889:8889
+    volumes:
+      - ./wdc/src/content:/www/content

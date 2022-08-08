@@ -4,7 +4,7 @@ const finalhandler = require('finalhandler');
 const serveStatic = require('serve-static');
 
 // utilize the same pattern for exiting port and cache settings
-const serverPortNumber = process.env.SERVER_PORT || 8888;
+const serverPortNumber = process.env.SERVER_PORT || 8889;
 const args = process.argv.slice(2);
 const disableCache = Array.isArray(args) && args.includes('--no-cache');
 
@@ -18,8 +18,9 @@ const setCustomCacheControl = (res, path) => {
 };
 
 // serve root folder supporting relative path for accessing resources and cache settings
-const serve = serveStatic('./', {
+const serve = serveStatic('./content', {
   setHeaders: setCustomCacheControl,
+  index: [ 'index.html' ]
 });
 
 const httpServer = http.createServer((req, res) => {
@@ -27,5 +28,5 @@ const httpServer = http.createServer((req, res) => {
 });
 httpServer.listen(serverPortNumber);
 
-console.log(`[Simulator HTTP Server] serving at: http://localhost:${serverPortNumber.toString().trim()}/Simulator/index.html`);
-console.log(`[Simulator HTTP Server] disable serving resources with cache: ${disableCache}`);
+console.log(`[WDC HTTP Server] serving at: http://localhost:${serverPortNumber.toString().trim()}`);
+console.log(`[WDC HTTP Server] disable serving resources with cache: ${disableCache}`);
