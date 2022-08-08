@@ -11,7 +11,7 @@ services:
     build:
       context: ./wdc
     command: npm start
-    container_name: democratizingdata_wdc_
+    container_name: democratizingdata_wdc
     ports:
       - 8889:8889
     volumes:

@@ -5,12 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./index.js --no-cache"
+    "start": "node ./index.js --no-cache",
+    "scrape_spec": "node ./scrape_spec.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "finalhandler": "^1.2.0",
     "serve-static": "^1.15.0"
+  },
+  "devDependencies": {
+    "swagger-parser": "^10.0.3"
   }
 }

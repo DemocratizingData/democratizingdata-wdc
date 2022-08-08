@@ -2,29 +2,23 @@
   var myConnector = tableau.makeConnector();
 
   myConnector.getSchema = function (schemaCallback) {
-    var cols = [{
-      id: "id",
-      dataType: tableau.dataTypeEnum.string
-    }, {
-        id: "mag",
-        alias: "magnitude",
-        dataType: tableau.dataTypeEnum.float
-    }, {
-        id: "title",
-        alias: "title",
-        dataType: tableau.dataTypeEnum.string
-    }, {
-        id: "location",
-        dataType: tableau.dataTypeEnum.geometry
-    }];
-
-    var tableSchema = {
-        id: "earthquakeFeed",
-        alias: "Earthquakes with magnitude greater than 4.5 in the last seven days",
-        columns: cols
-    };
-
-    schemaCallback([tableSchema]);
+    $.getJSON("tableSchema.json", function (tableSchema) {
+      tableSchema.forEach(
+        (schema) => {
+          schema.columns.forEach(
+            (column) => {
+              let finalType;
+              switch(column.dataType) {
+                case "integer": finalType = tableau.dataTypeEnum.integer; break;
+                case "string": finalType = tableau.dataTypeEnum.string; break;
+                case "number": finalType = tableau.dataTypeEnum.float; break;
+              }
+            }
+          )
+        }
+      );
+      schemaCallback(tableSchema);
+    }); 
   };
 
   myConnector.getData = function (table, doneCallback) {
@@ -35,7 +29,7 @@
 
 
   $(document).ready(function () {
-    console.log("TABLEAU OBJECT", tableau);
+    console.log("DATA TYPE ENUM", tableau.dataTypeEnum);
     $("#submitButton").click(function () {
         tableau.connectionName = "USGS Earthquake Feed";
 
