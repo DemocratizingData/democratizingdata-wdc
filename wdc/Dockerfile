@@ -1,6 +1,6 @@
 FROM node:16.15-slim
 
 WORKDIR /www
-COPY /src /www
+COPY /src/package.json /src/package-lock.json /www
 RUN npm ci
-RUN npm run build
+COPY /src /www

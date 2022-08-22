@@ -10,7 +10,7 @@
 
   myConnector.getData = function (table, doneCallback) {
     // Get data from the API URL, using the endpoint corresponding to the table ID
-    $.getJSON(`http://localhost:8000/${table.tableInfo.id}`, function(tableData) {
+    $.getJSON(`${process.env.APIURL}/${table.tableInfo.id}`, function(tableData) {
       table.appendRows(tableData);
       doneCallback();
     });

@@ -10,7 +10,9 @@ services:
   wdc:
     build:
       context: ./wdc
-    command: npm start
+    command: npm run start
     container_name: democratizingdata_wdc
     ports:
       - 8889:8889
+    environment:
+      - APIURL=http://localhost:8000
