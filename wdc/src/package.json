@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./index.js --no-cache",
-    "scrape_spec": "node ./scrape_spec.js"
+    "scrape_spec": "node ./scrape_spec.js",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,10 @@
     "serve-static": "^1.15.0"
   },
   "devDependencies": {
-    "swagger-parser": "^10.0.3"
+    "copy-webpack-plugin": "^11.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "swagger-parser": "^10.0.3",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   }
 }

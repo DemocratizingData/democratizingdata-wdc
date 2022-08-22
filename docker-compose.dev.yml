@@ -14,5 +14,3 @@ services:
     container_name: democratizingdata_wdc
     ports:
       - 8889:8889
-    volumes:
-      - ./wdc/src/content:/www/content
