@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  simulator:
+    build:
+      context: ./vendor
+    command: npm start
+    container_name: democratizingdata_wdc_simulator
+    ports:
+      - 8888:8888
+  wdc:
+    build:
+      context: ./wdc
+    command: npm run start
+    container_name: democratizingdata_wdc
+    ports:
+      - 8889:8889
+    environment:
+      - APIURL=https://dev.democratizingdata.tacc.utexas.edu
