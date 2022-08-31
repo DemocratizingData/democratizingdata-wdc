@@ -10,9 +10,9 @@ services:
   wdc:
     build:
       context: ./wdc
-    command: npm run start
+      args:
+        APIURL: https://dev.democratizingdata.tacc.utexas.edu
+    command: npm run serve
     container_name: democratizingdata_wdc
     ports:
       - 8889:8889
-    environment:
-      - APIURL=https://dev.democratizingdata.tacc.utexas.edu
