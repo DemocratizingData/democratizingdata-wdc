@@ -3,7 +3,11 @@ var fs = require('fs');
 
 //var url = "https://showusthedata-dev.tacc.utexas.edu/openapi.json"
 var url = "http://localhost:8000/openapi.json"
-var endpoints = ["/topics", "/publications"]
+var endpoints = [
+  "/topics", "/publications", "/authors", "/agency_runs", "/dataset_aliases", "/models", "/datasets",
+  "/asjcs", "/publishers", "/journals", "/publication_authors", "/publication_asjcs", "/publication_dataset_aliases",
+  "/pda_models", "/author_affiliations", "/issns", "/affiliations"
+]
 
 
 function tableauDataType(dataType) {
@@ -40,7 +44,7 @@ function parseSpec(spec, endpoints) {
   );
   console.log(tableSchema);
   fs.writeFileSync(
-    `${__dirname}/content/tableSchema.json`,
+    `${__dirname}/wdc/tableSchema.json`,
     JSON.stringify(tableSchema, null, 0)
   );
 }
