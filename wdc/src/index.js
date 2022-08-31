@@ -18,7 +18,7 @@ const setCustomCacheControl = (res, path) => {
 };
 
 // serve root folder supporting relative path for accessing resources and cache settings
-const serve = serveStatic('./content', {
+const serve = serveStatic('./dist', {
   setHeaders: setCustomCacheControl,
   index: [ 'index.html' ]
 });

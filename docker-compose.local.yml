@@ -15,4 +15,4 @@ services:
     ports:
       - 8889:8889
     environment:
-      - APIURL=https://dev.democratizingdata.tacc.utexas.edu
+      - APIURL=http://localhost:8000
