@@ -34,5 +34,5 @@ jobs:
           context: wdc
           push: true
           tags: taccdash/democratizingdata-wdc:${{ steps.vars.outputs.sha_short }},taccdash/democratizingdata-wdc:prod
-          args: |
+          build-args: |
             APIURL=https://prod.democratizingdata.tacc.utexas.edu          
