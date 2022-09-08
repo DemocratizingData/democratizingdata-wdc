@@ -3,6 +3,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const { webpack } = require('webpack');
 const Dotenv = require('dotenv-webpack');
+const { env } = require('process');
 
 module.exports = {
 	entry: './wdc/index.js',
@@ -13,7 +14,8 @@ module.exports = {
 	plugins: [
 		new Dotenv({ systemvars: true }),
 		new HtmlWebpackPlugin({
-			template: 'wdc/index.html'
+			template: 'wdc/index.html',
+			base: `${env.APIURL}/wdc`
 		}),
 		new CopyPlugin({
 			patterns: [
