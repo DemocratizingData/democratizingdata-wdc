@@ -14,8 +14,7 @@ module.exports = {
 	plugins: [
 		new Dotenv({ systemvars: true }),
 		new HtmlWebpackPlugin({
-			template: 'wdc/index.html',
-			base: `${env.APIURL}/wdc`
+			template: 'wdc/index.html'
 		}),
 		new CopyPlugin({
 			patterns: [

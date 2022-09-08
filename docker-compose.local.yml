@@ -12,6 +12,7 @@ services:
       context: ./wdc
       args:
         APIURL: http://localhost:8000
+        NODE_ENV: development
     command: npm run serve
     container_name: democratizingdata_wdc
     ports:
