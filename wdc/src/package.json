@@ -8,7 +8,8 @@
     "serve": "node ./index.js --no-cache",
     "scrape_spec": "node ./scrape_spec.js",
     "build": "webpack",
-    "start": "npm run build && npm run serve"
+    "start": "npm run build && npm run serve",
+    "deploy": "cp ./dist/* /wdc"
   },
   "author": "",
   "license": "ISC",
