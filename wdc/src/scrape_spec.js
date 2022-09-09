@@ -2,7 +2,13 @@ var parser = require('swagger-parser');
 var fs = require('fs');
 
 //var url = "https://showusthedata-dev.tacc.utexas.edu/openapi.json"
-var url = "http://localhost:8000/openapi.json"
+if (process.argv.length < 3) {
+  throw "Missing required argument - URL"
+}
+var url = process.argv[2];
+
+console.log(`Scraping from ${url}`);
+
 var endpoints = [
   "/topics", "/publications", "/authors", "/agency_runs", "/dataset_aliases", "/models", "/datasets",
   "/asjcs", "/publishers", "/journals", "/publication_authors", "/publication_asjcs", "/publication_dataset_aliases",
@@ -15,13 +21,15 @@ function tableauDataType(dataType) {
     case "integer": return "int";
     case "string": return "string";
     case "number": return "float";
-    default: return null;
+    case "boolean": return "bool";
+    default: throw `Unknown dataType ${dataType}`;
   }
 }
 
 function parseSpec(spec, endpoints) {
   const tableSchema = endpoints.map(
     (endpoint) => {
+      console.log(`Processing endpoint ${endpoint}`);
       path = spec.paths[endpoint];
       schema = path.get.responses['200'].content['application/json'].schema;
       schema_elems = schema.items['$ref'].split('/');
@@ -42,9 +50,12 @@ function parseSpec(spec, endpoints) {
       return tableSchema
     }
   );
+  console.log("Table schema");
   console.log(tableSchema);
+  const outFile = `${__dirname}/wdc/tableSchema.json`;
+  console.log(`Writing to ${outFile}`);
   fs.writeFileSync(
-    `${__dirname}/wdc/tableSchema.json`,
+    outFile,
     JSON.stringify(tableSchema, null, 0)
   );
 }
