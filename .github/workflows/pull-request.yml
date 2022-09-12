@@ -40,4 +40,4 @@ jobs:
           push: false
           tags: taccdash/democratizingdata-wdc:${{ steps.vars.outputs.sha_short }},taccdash/democratizingdata-wdc:dev
           build-args: |
-            APIURL=https://dev.democratizingdata.tacc.utexas.edu
+            APIURL=https://dev.democratizing-data.tacc.utexas.edu
