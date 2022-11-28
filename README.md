@@ -12,4 +12,12 @@ The first is the Tableau Web Data Connector simulator. It is used to validate th
 
 ## Updating the Schema
 
-The OpenAPI spec for the Democratizing Data API is scraped and converted into a structure that is compatible with Tableau's Web Data Connector table schema format. To run the scraper, make sure that [`./src/scrape_spec.js`](./src/scrape_spec.js) is pointing to the correct API URL. Then, inside the `./src/` directory, run `npm run scrape_spec`. This will generate a new [`./src/content/tableSchema.json`](./src/content/tableSchema.json) file that can be committed to this repo
+The OpenAPI spec for the Democratizing Data API is scraped and converted into a structure that is compatible with Tableau's Web Data Connector table schema format.
+To run the scraper, and you should always if you're updating WDC.
+1. `cd ./wdc/src`
+2. `npm run scrape_spec http://dev.democratizing-data.tacc.utexas.edu/openapi.json`
+    - Change the url to whichever site you want to scrape the spec from.
+    - You might have to `npm install swagger-parser` if it's not yet installed.
+3. Generated json at [`./wdc/src/wdc/tableSchema.json`](./wdc/src/wdc/tableSchema.json)
+4. Commit said file to this repo to update.
+5. NOTE: `scrape_spec.js` only parses endpoints specified in the `endpoints` variable. Add to the file if new endpoints are created.
