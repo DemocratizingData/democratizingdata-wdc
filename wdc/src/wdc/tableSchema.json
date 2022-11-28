@@ -1,855 +1,854 @@
 [
     {
-        "id": "topics",
-        "alias": "Get Topics",
-        "columns": [
-            {
-                "id": "id",
-                "alias": "ID",
-                "dataType": "int",
-                "description": "A unique ID for this row"
-            },
-            {
-                "id": "last_updated_date",
-                "alias": "Last Updated Date",
-                "dataType": "string",
-                "description": "Timestamp of last update"
-            },
-            {
-                "id": "run_id",
-                "alias": "Run ID",
-                "dataType": "int",
-                "description": "A unique ID that identifies which agency run generated this row"
-            },
-            {
-                "id": "keywords",
-                "alias": "Keywords",
-                "dataType": "string",
-                "description": "A list of keywords separated by the pipe character |"
-            },
-            {
-                "id": "external_topic_id",
-                "alias": "External Topic ID",
-                "dataType": "string",
-                "description": "A unique ID that corresponds to an external topic"
-            },
-            {
-                "id": "prominence",
-                "alias": "Score",
-                "dataType": "float",
-                "description": "Relevance score"
-            }
-        ]
+      "id":"topics",
+      "alias":"Get Topics",
+      "columns":[
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"run_id",
+          "alias":"Run ID",
+          "dataType":"int",
+          "description":"A unique ID that identifies which agency run generated this row"
+        },
+        {
+          "id":"keywords",
+          "alias":"Keywords",
+          "dataType":"string",
+          "description":"A list of keywords separated by the pipe character |"
+        },
+        {
+          "id":"external_topic_id",
+          "alias":"External Topic ID",
+          "dataType":"string",
+          "description":"A unique ID that corresponds to an external topic"
+        },
+        {
+          "id":"prominence",
+          "alias":"Score",
+          "dataType":"float",
+          "description":"Relevance score"
+        }
+      ]
     },
     {
-        "id": "publications",
-        "alias": "Get Publications",
-        "columns": [
-            {
-                "id": "external_id",
-                "alias": "External ID",
-                "dataType": "string",
-                "description": "An ID for identifying this record in an external data source"
-            },
-            {
-                "id": "id",
-                "alias": "ID",
-                "dataType": "int",
-                "description": "A unique ID for this row"
-            },
-            {
-                "id": "last_updated_date",
-                "alias": "Last Updated Date",
-                "dataType": "string",
-                "description": "Timestamp of last update"
-            },
-            {
-                "id": "run_id",
-                "alias": "Run ID",
-                "dataType": "int",
-                "description": "A unique ID that identifies which agency run generated this row"
-            },
-            {
-                "id": "journal_id",
-                "alias": "Journal ID",
-                "dataType": "int",
-                "description": "A unique ID that identified which journal has this publication"
-            },
-            {
-                "id": "title",
-                "alias": "Title",
-                "dataType": "string",
-                "description": "The title of the article within the publication"
-            },
-            {
-                "id": "doi",
-                "alias": "DOI",
-                "dataType": "string",
-                "description": "Digital Object Identifier"
-            },
-            {
-                "id": "year",
-                "alias": "Year",
-                "dataType": "int",
-                "description": "Year of the publication"
-            },
-            {
-                "id": "month",
-                "alias": "Month",
-                "dataType": "int",
-                "description": "Month of the publication"
-            },
-            {
-                "id": "pub_type",
-                "alias": "Publication Type",
-                "dataType": "string",
-                "description": "Publication type"
-            },
-            {
-                "id": "citation_count",
-                "alias": "Citation Count",
-                "dataType": "int",
-                "description": "The number of citations for this publication"
-            },
-            {
-                "id": "fw_citation_impact",
-                "alias": "Citation Impact",
-                "dataType": "float",
-                "description": "The impact of this citation (DRAFT)"
-            }
-        ]
+      "id":"publications",
+      "alias":"Get Publications",
+      "columns":[
+        {
+          "id":"external_id",
+          "alias":"External ID",
+          "dataType":"string",
+          "description":"An ID for identifying this record in an external data source"
+        },
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"run_id",
+          "alias":"Run ID",
+          "dataType":"int",
+          "description":"A unique ID that identifies which agency run generated this row"
+        },
+        {
+          "id":"journal_id",
+          "alias":"Journal ID",
+          "dataType":"int",
+          "description":"A unique ID that identified which journal has this publication"
+        },
+        {
+          "id":"title",
+          "alias":"Title",
+          "dataType":"string",
+          "description":"The title of the article within the publication"
+        },
+        {
+          "id":"doi",
+          "alias":"DOI",
+          "dataType":"string",
+          "description":"Digital Object Identifier"
+        },
+        {
+          "id":"year",
+          "alias":"Year",
+          "dataType":"int",
+          "description":"Year of the publication"
+        },
+        {
+          "id":"month",
+          "alias":"Month",
+          "dataType":"int",
+          "description":"Month of the publication"
+        },
+        {
+          "id":"pub_type",
+          "alias":"Publication Type",
+          "dataType":"string",
+          "description":"Publication type"
+        },
+        {
+          "id":"citation_count",
+          "alias":"Citation Count",
+          "dataType":"int",
+          "description":"The number of citations for this publication"
+        },
+        {
+          "id":"fw_citation_impact",
+          "alias":"Citation Impact",
+          "dataType":"float",
+          "description":"The impact of this citation (DRAFT)"
+        }
+      ]
     },
     {
-        "id": "authors",
-        "alias": "Get Authors",
-        "columns": [
-            {
-                "id": "external_id",
-                "alias": "External ID",
-                "dataType": "string",
-                "description": "An ID for identifying this record in an external data source"
-            },
-            {
-                "id": "id",
-                "alias": "ID",
-                "dataType": "int",
-                "description": "A unique ID for this row"
-            },
-            {
-                "id": "last_updated_date",
-                "alias": "Last Updated Date",
-                "dataType": "string",
-                "description": "Timestamp of last update"
-            },
-            {
-                "id": "run_id",
-                "alias": "Run ID",
-                "dataType": "int",
-                "description": "A unique ID that identifies which agency run generated this row"
-            },
-            {
-                "id": "given_name",
-                "alias": "Given Name",
-                "dataType": "string",
-                "description": "The author's given name"
-            },
-            {
-                "id": "family_name",
-                "alias": "Family Name",
-                "dataType": "string",
-                "description": "The author's familiy name"
-            }
-        ]
+      "id":"authors",
+      "alias":"Get Authors",
+      "columns":[
+        {
+          "id":"external_id",
+          "alias":"External ID",
+          "dataType":"string",
+          "description":"An ID for identifying this record in an external data source"
+        },
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"run_id",
+          "alias":"Run ID",
+          "dataType":"int",
+          "description":"A unique ID that identifies which agency run generated this row"
+        },
+        {
+          "id":"given_name",
+          "alias":"Given Name",
+          "dataType":"string",
+          "description":"The author's given name"
+        },
+        {
+          "id":"family_name",
+          "alias":"Family Name",
+          "dataType":"string",
+          "description":"The author's familiy name"
+        }
+      ]
     },
     {
-        "id": "agency_runs",
-        "alias": "Get Agency Runs",
-        "columns": [
-            {
-                "id": "id",
-                "alias": "ID",
-                "dataType": "int",
-                "description": "A unique ID for this row"
-            },
-            {
-                "id": "last_updated_date",
-                "alias": "Last Updated Date",
-                "dataType": "string",
-                "description": "Timestamp of last update"
-            },
-            {
-                "id": "agency",
-                "alias": "Agency",
-                "dataType": "string",
-                "description": "The name of the agency for this run"
-            },
-            {
-                "id": "version",
-                "alias": "Version",
-                "dataType": "string",
-                "description": "The version number for this run"
-            },
-            {
-                "id": "run_date",
-                "alias": "Run Date",
-                "dataType": "string",
-                "description": "The date of this run"
-            }
-        ]
+      "id":"agency_runs",
+      "alias":"Get Agency Runs",
+      "columns":[
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"agency",
+          "alias":"Agency",
+          "dataType":"string",
+          "description":"The name of the agency for this run"
+        },
+        {
+          "id":"version",
+          "alias":"Version",
+          "dataType":"string",
+          "description":"The version number for this run"
+        },
+        {
+          "id":"run_date",
+          "alias":"Run Date",
+          "dataType":"string",
+          "description":"The date of this run"
+        }
+      ]
     },
     {
-        "id": "dataset_aliases",
-        "alias": "Get Dataset Aliases",
-        "columns": [
-            {
-                "id": "id",
-                "alias": "ID",
-                "dataType": "int",
-                "description": "A unique ID for this row"
-            },
-            {
-                "id": "last_updated_date",
-                "alias": "Last Updated Date",
-                "dataType": "string",
-                "description": "Timestamp of last update"
-            },
-            {
-                "id": "run_id",
-                "alias": "Run ID",
-                "dataType": "int",
-                "description": "A unique ID that identifies which agency run generated this row"
-            },
-            {
-                "id": "alias_id",
-                "alias": "Alias ID",
-                "dataType": "int",
-                "description": "The alias ID of a dataset, for identifying this dataset's usage in other tables"
-            },
-            {
-                "id": "alias",
-                "alias": "Alias",
-                "dataType": "string",
-                "description": "The identifying alias or name of a dataset"
-            },
-            {
-                "id": "parent_alias_id",
-                "alias": "Parent Alias ID",
-                "dataType": "int",
-                "description": "If this dataset alias is a child, the parent_alias_id field identifies the parent alias"
-            },
-            {
-                "id": "alias_type",
-                "alias": "Alias Type",
-                "dataType": "string",
-                "description": "The type of alias for this dataset"
-            },
-            {
-                "id": "url",
-                "alias": "URL",
-                "dataType": "string",
-                "description": "The URL for retrieving this dataset"
-            }
-        ]
+      "id":"dataset_aliases",
+      "alias":"Get Dataset Aliases",
+      "columns":[
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"run_id",
+          "alias":"Run ID",
+          "dataType":"int",
+          "description":"A unique ID that identifies which agency run generated this row"
+        },
+        {
+          "id":"alias_id",
+          "alias":"Alias ID",
+          "dataType":"int",
+          "description":"The alias ID of a dataset, for identifying this dataset's usage in other tables"
+        },
+        {
+          "id":"alias",
+          "alias":"Alias",
+          "dataType":"string",
+          "description":"The identifying alias or name of a dataset"
+        },
+        {
+          "id":"parent_alias_id",
+          "alias":"Parent Alias ID",
+          "dataType":"int",
+          "description":"If this dataset alias is a child, the parent_alias_id field identifies the parent alias"
+        },
+        {
+          "id":"alias_type",
+          "alias":"Alias Type",
+          "dataType":"string",
+          "description":"The type of alias for this dataset"
+        },
+        {
+          "id":"url",
+          "alias":"URL",
+          "dataType":"string",
+          "description":"The URL for retrieving this dataset"
+        }
+      ]
     },
     {
-        "id": "models",
-        "alias": "Get Models",
-        "columns": [
-            {
-                "id": "id",
-                "alias": "ID",
-                "dataType": "int",
-                "description": "A unique ID for this row"
-            },
-            {
-                "id": "last_updated_date",
-                "alias": "Last Updated Date",
-                "dataType": "string",
-                "description": "Timestamp of last update"
-            },
-            {
-                "id": "name",
-                "alias": "Name",
-                "dataType": "string",
-                "description": "The name of this model"
-            },
-            {
-                "id": "github_commit_url",
-                "alias": "Github Commit URL",
-                "dataType": "string",
-                "description": "The URL for the GitHub commit that contains this model"
-            },
-            {
-                "id": "description",
-                "alias": "Description",
-                "dataType": "string",
-                "description": "A short description of this model"
-            }
-        ]
+      "id":"models",
+      "alias":"Get Models",
+      "columns":[
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"name",
+          "alias":"Name",
+          "dataType":"string",
+          "description":"The name of this model"
+        },
+        {
+          "id":"github_commit_url",
+          "alias":"Github Commit URL",
+          "dataType":"string",
+          "description":"The URL for the GitHub commit that contains this model"
+        },
+        {
+          "id":"description",
+          "alias":"Description",
+          "dataType":"string",
+          "description":"A short description of this model"
+        }
+      ]
     },
     {
-        "id": "datasets",
-        "alias": "Get Datasets",
-        "columns": [
-            {
-                "id": "id",
-                "alias": "ID",
-                "dataType": "int",
-                "description": "A unique ID for this row"
-            },
-            {
-                "id": "last_updated_date",
-                "alias": "Last Updated Date",
-                "dataType": "string",
-                "description": "Timestamp of last update"
-            },
-            {
-                "id": "agency",
-                "alias": "Agency",
-                "dataType": "string",
-                "description": "The name of the agency for this run"
-            },
-            {
-                "id": "version",
-                "alias": "Version",
-                "dataType": "string",
-                "description": "The version number for this run"
-            },
-            {
-                "id": "run_date",
-                "alias": "Run Date",
-                "dataType": "string",
-                "description": "The date of this run"
-            },
-            {
-                "id": "run_id",
-                "alias": "Run ID",
-                "dataType": "int",
-                "description": "A unique ID that identifies which agency run generated this row"
-            },
-            {
-                "id": "alias_id",
-                "alias": "Alias ID",
-                "dataType": "int",
-                "description": "The alias ID of a dataset, for identifying this dataset's usage in other tables"
-            },
-            {
-                "id": "alias",
-                "alias": "Alias",
-                "dataType": "string",
-                "description": "The identifying alias or name of a dataset"
-            },
-            {
-                "id": "parent_alias_id",
-                "alias": "Parent Alias ID",
-                "dataType": "int",
-                "description": "If this dataset alias is a child, the parent_alias_id field identifies the parent alias"
-            },
-            {
-                "id": "alias_type",
-                "alias": "Alias Type",
-                "dataType": "string",
-                "description": "The type of alias for this dataset"
-            },
-            {
-                "id": "url",
-                "alias": "URL",
-                "dataType": "string",
-                "description": "The URL for retrieving this dataset"
-            }
-        ]
+      "id":"datasets",
+      "alias":"Get Datasets",
+      "columns":[
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"agency",
+          "alias":"Agency",
+          "dataType":"string",
+          "description":"The name of the agency for this run"
+        },
+        {
+          "id":"version",
+          "alias":"Version",
+          "dataType":"string",
+          "description":"The version number for this run"
+        },
+        {
+          "id":"run_date",
+          "alias":"Run Date",
+          "dataType":"string",
+          "description":"The date of this run"
+        },
+        {
+          "id":"run_id",
+          "alias":"Run ID",
+          "dataType":"int",
+          "description":"A unique ID that identifies which agency run generated this row"
+        },
+        {
+          "id":"alias_id",
+          "alias":"Alias ID",
+          "dataType":"int",
+          "description":"The alias ID of a dataset, for identifying this dataset's usage in other tables"
+        },
+        {
+          "id":"alias",
+          "alias":"Alias",
+          "dataType":"string",
+          "description":"The identifying alias or name of a dataset"
+        },
+        {
+          "id":"parent_alias_id",
+          "alias":"Parent Alias ID",
+          "dataType":"int",
+          "description":"If this dataset alias is a child, the parent_alias_id field identifies the parent alias"
+        },
+        {
+          "id":"alias_type",
+          "alias":"Alias Type",
+          "dataType":"string",
+          "description":"The type of alias for this dataset"
+        },
+        {
+          "id":"url",
+          "alias":"URL",
+          "dataType":"string",
+          "description":"The URL for retrieving this dataset"
+        }
+      ]
     },
     {
-        "id": "asjcs",
-        "alias": "Get Asjcs",
-        "columns": [
-            {
-                "id": "id",
-                "alias": "ID",
-                "dataType": "int",
-                "description": "A unique ID for this row"
-            },
-            {
-                "id": "last_updated_date",
-                "alias": "Last Updated Date",
-                "dataType": "string",
-                "description": "Timestamp of last update"
-            },
-            {
-                "id": "run_id",
-                "alias": "Run ID",
-                "dataType": "int",
-                "description": "A unique ID that identifies which agency run generated this row"
-            },
-            {
-                "id": "code",
-                "alias": "Code",
-                "dataType": "int",
-                "description": "ASJC Code"
-            },
-            {
-                "id": "label",
-                "alias": "Label",
-                "dataType": "string",
-                "description": "A label for this ASJC"
-            }
-        ]
+      "id":"asjcs",
+      "alias":"Get Asjcs",
+      "columns":[
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"run_id",
+          "alias":"Run ID",
+          "dataType":"int",
+          "description":"A unique ID that identifies which agency run generated this row"
+        },
+        {
+          "id":"code",
+          "alias":"Code",
+          "dataType":"int",
+          "description":"ASJC Code"
+        },
+        {
+          "id":"label",
+          "alias":"Label",
+          "dataType":"string",
+          "description":"A label for this ASJC"
+        }
+      ]
     },
     {
-        "id": "publishers",
-        "alias": "Get Publishers",
-        "columns": [
-            {
-                "id": "external_id",
-                "alias": "External ID",
-                "dataType": "string",
-                "description": "An ID for identifying this record in an external data source"
-            },
-            {
-                "id": "id",
-                "alias": "ID",
-                "dataType": "int",
-                "description": "A unique ID for this row"
-            },
-            {
-                "id": "last_updated_date",
-                "alias": "Last Updated Date",
-                "dataType": "string",
-                "description": "Timestamp of last update"
-            },
-            {
-                "id": "run_id",
-                "alias": "Run ID",
-                "dataType": "int",
-                "description": "A unique ID that identifies which agency run generated this row"
-            },
-            {
-                "id": "name",
-                "alias": "Publisher",
-                "dataType": "string",
-                "description": "The name of a publisher"
-            }
-        ]
+      "id":"publishers",
+      "alias":"Get Publishers",
+      "columns":[
+        {
+          "id":"external_id",
+          "alias":"External ID",
+          "dataType":"string",
+          "description":"An ID for identifying this record in an external data source"
+        },
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"run_id",
+          "alias":"Run ID",
+          "dataType":"int",
+          "description":"A unique ID that identifies which agency run generated this row"
+        },
+        {
+          "id":"name",
+          "alias":"Publisher",
+          "dataType":"string",
+          "description":"The name of a publisher"
+        }
+      ]
     },
     {
-        "id": "journals",
-        "alias": "Get Journals",
-        "columns": [
-            {
-                "id": "external_id",
-                "alias": "External ID",
-                "dataType": "string",
-                "description": "An ID for identifying this record in an external data source"
-            },
-            {
-                "id": "id",
-                "alias": "ID",
-                "dataType": "int",
-                "description": "A unique ID for this row"
-            },
-            {
-                "id": "last_updated_date",
-                "alias": "Last Updated Date",
-                "dataType": "string",
-                "description": "Timestamp of last update"
-            },
-            {
-                "id": "run_id",
-                "alias": "Run ID",
-                "dataType": "int",
-                "description": "A unique ID that identifies which agency run generated this row"
-            },
-            {
-                "id": "publisher_id",
-                "alias": "Publisher ID",
-                "dataType": "int",
-                "description": "The ID of the associated publisher for this journal"
-            },
-            {
-                "id": "title",
-                "alias": "Title",
-                "dataType": "string",
-                "description": "The title of this journal"
-            },
-            {
-                "id": "cite_score",
-                "alias": "Cite Score",
-                "dataType": "float",
-                "description": "The citation score of this journal"
-            }
-        ]
+      "id":"journals",
+      "alias":"Get Journals",
+      "columns":[
+        {
+          "id":"external_id",
+          "alias":"External ID",
+          "dataType":"string",
+          "description":"An ID for identifying this record in an external data source"
+        },
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"run_id",
+          "alias":"Run ID",
+          "dataType":"int",
+          "description":"A unique ID that identifies which agency run generated this row"
+        },
+        {
+          "id":"publisher_id",
+          "alias":"Publisher ID",
+          "dataType":"int",
+          "description":"The ID of the associated publisher for this journal"
+        },
+        {
+          "id":"title",
+          "alias":"Title",
+          "dataType":"string",
+          "description":"The title of this journal"
+        },
+        {
+          "id":"cite_score",
+          "alias":"Cite Score",
+          "dataType":"float",
+          "description":"The citation score of this journal"
+        }
+      ]
     },
     {
-        "id": "publication_authors",
-        "alias": "Get Publication Authors",
-        "columns": [
-            {
-                "id": "publication_id",
-                "alias": "Publication ID",
-                "dataType": "int",
-                "description": "The ID of the associated publication for this record"
-            },
-            {
-                "id": "id",
-                "alias": "ID",
-                "dataType": "int",
-                "description": "A unique ID for this row"
-            },
-            {
-                "id": "last_updated_date",
-                "alias": "Last Updated Date",
-                "dataType": "string",
-                "description": "Timestamp of last update"
-            },
-            {
-                "id": "run_id",
-                "alias": "Run ID",
-                "dataType": "int",
-                "description": "A unique ID that identifies which agency run generated this row"
-            },
-            {
-                "id": "author_id",
-                "alias": "Author ID",
-                "dataType": "int",
-                "description": "The ID of the associated author for this record"
-            },
-            {
-                "id": "author_position",
-                "alias": "Author Position",
-                "dataType": "int",
-                "description": "The author position"
-            }
-        ]
+      "id":"publication_authors",
+      "alias":"Get Publication Authors",
+      "columns":[
+        {
+          "id":"publication_id",
+          "alias":"Publication ID",
+          "dataType":"int",
+          "description":"The ID of the associated publication for this record"
+        },
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"run_id",
+          "alias":"Run ID",
+          "dataType":"int",
+          "description":"A unique ID that identifies which agency run generated this row"
+        },
+        {
+          "id":"author_id",
+          "alias":"Author ID",
+          "dataType":"int",
+          "description":"The ID of the associated author for this record"
+        },
+        {
+          "id":"author_position",
+          "alias":"Author Position",
+          "dataType":"int",
+          "description":"The author position"
+        }
+      ]
     },
     {
-        "id": "publication_topics",
-        "alias": "Get Publication Topics",
-        "columns": [
-            {
-                "id": "publication_id",
-                "alias": "Publication ID",
-                "dataType": "int",
-                "description": "The ID of the associated publication for this record"
-            },
-            {
-                "id": "id",
-                "alias": "ID",
-                "dataType": "int",
-                "description": "A unique ID for this row"
-            },
-            {
-                "id": "last_updated_date",
-                "alias": "Last Updated Date",
-                "dataType": "string",
-                "description": "Timestamp of last update"
-            },
-            {
-                "id": "run_id",
-                "alias": "Run ID",
-                "dataType": "int",
-                "description": "A unique ID that identifies which agency run generated this row"
-            },
-            {
-                "id": "topic_id",
-                "alias": "Topic ID",
-                "dataType": "int",
-                "description": "The ID of the associated topic for this record"
-            },
-            {
-                "id": "score",
-                "alias": "Topic Score",
-                "dataType": "string",
-                "description": "The topic score"
-            }
-        ]
-    },
-
-    {
-        "id": "publication_asjcs",
-        "alias": "Get Publication Asjcs",
-        "columns": [
-            {
-                "id": "publication_id",
-                "alias": "Publication ID",
-                "dataType": "int",
-                "description": "The ID of the associated publication for this record"
-            },
-            {
-                "id": "id",
-                "alias": "ID",
-                "dataType": "int",
-                "description": "A unique ID for this row"
-            },
-            {
-                "id": "last_updated_date",
-                "alias": "Last Updated Date",
-                "dataType": "string",
-                "description": "Timestamp of last update"
-            },
-            {
-                "id": "run_id",
-                "alias": "Run ID",
-                "dataType": "int",
-                "description": "A unique ID that identifies which agency run generated this row"
-            },
-            {
-                "id": "asjc_id",
-                "alias": "ASJC ID",
-                "dataType": "int",
-                "description": "The ID of the associated asjc for this record"
-            }
-        ]
+      "id":"publication_asjcs",
+      "alias":"Get Publication Asjcs",
+      "columns":[
+        {
+          "id":"publication_id",
+          "alias":"Publication ID",
+          "dataType":"int",
+          "description":"The ID of the associated publication for this record"
+        },
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"run_id",
+          "alias":"Run ID",
+          "dataType":"int",
+          "description":"A unique ID that identifies which agency run generated this row"
+        },
+        {
+          "id":"asjc_id",
+          "alias":"ASJC ID",
+          "dataType":"int",
+          "description":"The ID of the associated asjc for this record"
+        }
+      ]
     },
     {
-        "id": "publication_dataset_aliases",
-        "alias": "Get Publication Dataset Aliases",
-        "columns": [
-            {
-                "id": "publication_id",
-                "alias": "Publication ID",
-                "dataType": "int",
-                "description": "The ID of the associated publication for this record"
-            },
-            {
-                "id": "id",
-                "alias": "ID",
-                "dataType": "int",
-                "description": "A unique ID for this row"
-            },
-            {
-                "id": "last_updated_date",
-                "alias": "Last Updated Date",
-                "dataType": "string",
-                "description": "Timestamp of last update"
-            },
-            {
-                "id": "run_id",
-                "alias": "Run ID",
-                "dataType": "int",
-                "description": "A unique ID that identifies which agency run generated this row"
-            },
-            {
-                "id": "elsevier_id",
-                "alias": "Elsevier ID",
-                "dataType": "int",
-                "description": "The elsevier ID for this record"
-            },
-            {
-                "id": "dataset_alias_id",
-                "alias": "Dataset Alias ID",
-                "dataType": "int",
-                "description": "The ID of the associated dataset alias for this record"
-            },
-            {
-                "id": "alias_id",
-                "alias": "Alias ID",
-                "dataType": "int",
-                "description": "The ID of the associated alias for this record"
-            },
-            {
-                "id": "mention_candidate",
-                "alias": "Mention Candidate",
-                "dataType": "string",
-                "description": "The mention candidate"
-            },
-            {
-                "id": "snippet",
-                "alias": "Snippet",
-                "dataType": "string",
-                "description": "A snippet of text data"
-            },
-            {
-                "id": "is_fuzzy",
-                "alias": "Is Fuzzy",
-                "dataType": "bool",
-                "description": "Flag indicating if this record is fuzzy"
-            },
-            {
-                "id": "fuzzy_score",
-                "alias": "Fuzzy Score",
-                "dataType": "float",
-                "description": "The fuzzy score"
-            }
-        ]
+      "id":"publication_topics",
+      "alias":"Get Publication Topics",
+      "columns":[
+        {
+          "id":"publication_id",
+          "alias":"Publication ID",
+          "dataType":"int",
+          "description":"The ID of the associated publication for this record"
+        },
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"run_id",
+          "alias":"Run ID",
+          "dataType":"int",
+          "description":"A unique ID that identifies which agency run generated this row"
+        },
+        {
+          "id":"topic_id",
+          "alias":"Topic ID",
+          "dataType":"int",
+          "description":"The ID of the associated Topic for this record"
+        },
+        {
+          "id":"score",
+          "alias":"Score",
+          "dataType":"int",
+          "description":"The topic score"
+        }
+      ]
     },
     {
-        "id": "pda_models",
-        "alias": "Get Pda Models",
-        "columns": [
-            {
-                "id": "id",
-                "alias": "ID",
-                "dataType": "int",
-                "description": "A unique ID for this row"
-            },
-            {
-                "id": "last_updated_date",
-                "alias": "Last Updated Date",
-                "dataType": "string",
-                "description": "Timestamp of last update"
-            },
-            {
-                "id": "run_id",
-                "alias": "Run ID",
-                "dataType": "int",
-                "description": "A unique ID that identifies which agency run generated this row"
-            },
-            {
-                "id": "publication_dataset_alias_id",
-                "alias": "Publication Dataset Alias ID",
-                "dataType": "int",
-                "description": "The ID of the publication dataset alias associated with this record"
-            },
-            {
-                "id": "model_id",
-                "alias": "Model ID",
-                "dataType": "int",
-                "description": "The model's ID"
-            },
-            {
-                "id": "score",
-                "alias": "Score",
-                "dataType": "float",
-                "description": "The model's score"
-            }
-        ]
+      "id":"publication_dataset_aliases",
+      "alias":"Get Publication Dataset Aliases",
+      "columns":[
+        {
+          "id":"publication_id",
+          "alias":"Publication ID",
+          "dataType":"int",
+          "description":"The ID of the associated publication for this record"
+        },
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"run_id",
+          "alias":"Run ID",
+          "dataType":"int",
+          "description":"A unique ID that identifies which agency run generated this row"
+        },
+        {
+          "id":"elsevier_id",
+          "alias":"Elsevier ID",
+          "dataType":"int",
+          "description":"The elsevier ID for this record"
+        },
+        {
+          "id":"dataset_alias_id",
+          "alias":"Dataset Alias ID",
+          "dataType":"int",
+          "description":"The ID of the associated dataset alias for this record"
+        },
+        {
+          "id":"alias_id",
+          "alias":"Alias ID",
+          "dataType":"int",
+          "description":"The ID of the associated alias for this record"
+        },
+        {
+          "id":"mention_candidate",
+          "alias":"Mention Candidate",
+          "dataType":"string",
+          "description":"The mention candidate"
+        },
+        {
+          "id":"snippet",
+          "alias":"Snippet",
+          "dataType":"string",
+          "description":"A snippet of text data"
+        },
+        {
+          "id":"is_fuzzy",
+          "alias":"Is Fuzzy",
+          "dataType":"bool",
+          "description":"Flag indicating if this record is fuzzy"
+        },
+        {
+          "id":"fuzzy_score",
+          "alias":"Fuzzy Score",
+          "dataType":"float",
+          "description":"The fuzzy score"
+        }
+      ]
     },
     {
-        "id": "author_affiliations",
-        "alias": "Get Author Affiliations",
-        "columns": [
-            {
-                "id": "id",
-                "alias": "ID",
-                "dataType": "int",
-                "description": "A unique ID for this row"
-            },
-            {
-                "id": "last_updated_date",
-                "alias": "Last Updated Date",
-                "dataType": "string",
-                "description": "Timestamp of last update"
-            },
-            {
-                "id": "run_id",
-                "alias": "Run ID",
-                "dataType": "int",
-                "description": "A unique ID that identifies which agency run generated this row"
-            },
-            {
-                "id": "publication_author_id",
-                "alias": "Publication Author ID",
-                "dataType": "int",
-                "description": "The ID of the publication author for this record"
-            },
-            {
-                "id": "affiliation_id",
-                "alias": "Affiliation ID",
-                "dataType": "int",
-                "description": "The ID of the affiliation for this record"
-            }
-        ]
+      "id":"pda_models",
+      "alias":"Get Pda Models",
+      "columns":[
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"run_id",
+          "alias":"Run ID",
+          "dataType":"int",
+          "description":"A unique ID that identifies which agency run generated this row"
+        },
+        {
+          "id":"publication_dataset_alias_id",
+          "alias":"Publication Dataset Alias ID",
+          "dataType":"int",
+          "description":"The ID of the publication dataset alias associated with this record"
+        },
+        {
+          "id":"model_id",
+          "alias":"Model ID",
+          "dataType":"int",
+          "description":"The model's ID"
+        },
+        {
+          "id":"score",
+          "alias":"Score",
+          "dataType":"float",
+          "description":"The model's score"
+        }
+      ]
     },
     {
-        "id": "issns",
-        "alias": "Get Issns",
-        "columns": [
-            {
-                "id": "id",
-                "alias": "ID",
-                "dataType": "int",
-                "description": "A unique ID for this row"
-            },
-            {
-                "id": "last_updated_date",
-                "alias": "Last Updated Date",
-                "dataType": "string",
-                "description": "Timestamp of last update"
-            },
-            {
-                "id": "run_id",
-                "alias": "Run ID",
-                "dataType": "int",
-                "description": "A unique ID that identifies which agency run generated this row"
-            },
-            {
-                "id": "journal_id",
-                "alias": "Journal ID",
-                "dataType": "int",
-                "description": "The ID of the journal for this record"
-            },
-            {
-                "id": "ISSN",
-                "alias": "ISSN",
-                "dataType": "string",
-                "description": "ISSN"
-            }
-        ]
+      "id":"author_affiliations",
+      "alias":"Get Author Affiliations",
+      "columns":[
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"run_id",
+          "alias":"Run ID",
+          "dataType":"int",
+          "description":"A unique ID that identifies which agency run generated this row"
+        },
+        {
+          "id":"publication_author_id",
+          "alias":"Publication Author ID",
+          "dataType":"int",
+          "description":"The ID of the publication author for this record"
+        },
+        {
+          "id":"affiliation_id",
+          "alias":"Affiliation ID",
+          "dataType":"int",
+          "description":"The ID of the affiliation for this record"
+        }
+      ]
     },
     {
-        "id": "affiliations",
-        "alias": "Get Affiliations",
-        "columns": [
-            {
-                "id": "external_id",
-                "alias": "External ID",
-                "dataType": "string",
-                "description": "An ID for identifying this record in an external data source"
-            },
-            {
-                "id": "id",
-                "alias": "ID",
-                "dataType": "int",
-                "description": "A unique ID for this row"
-            },
-            {
-                "id": "last_updated_date",
-                "alias": "Last Updated Date",
-                "dataType": "string",
-                "description": "Timestamp of last update"
-            },
-            {
-                "id": "run_id",
-                "alias": "Run ID",
-                "dataType": "int",
-                "description": "A unique ID that identifies which agency run generated this row"
-            },
-            {
-                "id": "institution_name",
-                "alias": "Institution Name",
-                "dataType": "string",
-                "description": "The name of the institution of this affiliation"
-            },
-            {
-                "id": "address",
-                "alias": "Address",
-                "dataType": "string",
-                "description": "The street address of this affiliation"
-            },
-            {
-                "id": "city",
-                "alias": "City",
-                "dataType": "string",
-                "description": "The name of the city of this affiliation"
-            },
-            {
-                "id": "state",
-                "alias": "State",
-                "dataType": "string",
-                "description": "The state of this affiliation"
-            },
-            {
-                "id": "country_code",
-                "alias": "Country Code",
-                "dataType": "string",
-                "description": "The country code of this affiliation"
-            },
-            {
-                "id": "postal_code",
-                "alias": "Postal Code",
-                "dataType": "string",
-                "description": "The postal code of this affiliation"
-            }
-        ]
+      "id":"issns",
+      "alias":"Get Issns",
+      "columns":[
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"run_id",
+          "alias":"Run ID",
+          "dataType":"int",
+          "description":"A unique ID that identifies which agency run generated this row"
+        },
+        {
+          "id":"journal_id",
+          "alias":"Journal ID",
+          "dataType":"int",
+          "description":"The ID of the journal for this record"
+        },
+        {
+          "id":"ISSN",
+          "alias":"ISSN",
+          "dataType":"string",
+          "description":"ISSN"
+        }
+      ]
+    },
+    {
+      "id":"affiliations",
+      "alias":"Get Affiliations",
+      "columns":[
+        {
+          "id":"external_id",
+          "alias":"External ID",
+          "dataType":"string",
+          "description":"An ID for identifying this record in an external data source"
+        },
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"run_id",
+          "alias":"Run ID",
+          "dataType":"int",
+          "description":"A unique ID that identifies which agency run generated this row"
+        },
+        {
+          "id":"institution_name",
+          "alias":"Institution Name",
+          "dataType":"string",
+          "description":"The name of the institution of this affiliation"
+        },
+        {
+          "id":"address",
+          "alias":"Address",
+          "dataType":"string",
+          "description":"The street address of this affiliation"
+        },
+        {
+          "id":"city",
+          "alias":"City",
+          "dataType":"string",
+          "description":"The name of the city of this affiliation"
+        },
+        {
+          "id":"state",
+          "alias":"State",
+          "dataType":"string",
+          "description":"The state of this affiliation"
+        },
+        {
+          "id":"country_code",
+          "alias":"Country Code",
+          "dataType":"string",
+          "description":"The country code of this affiliation"
+        },
+        {
+          "id":"postal_code",
+          "alias":"Postal Code",
+          "dataType":"string",
+          "description":"The postal code of this affiliation"
+        }
+      ]
     }
-]
+  ]
