@@ -600,8 +600,8 @@
       ]
     },
     {
-      "id":"publication_dataset_aliases",
-      "alias":"Get Publication Dataset Aliases",
+      "id":"dyads",
+      "alias":"Get Dyads",
       "columns":[
         {
           "id":"publication_id",
@@ -626,12 +626,6 @@
           "alias":"Run ID",
           "dataType":"int",
           "description":"A unique ID that identifies which agency run generated this row"
-        },
-        {
-          "id":"elsevier_id",
-          "alias":"Elsevier ID",
-          "dataType":"int",
-          "description":"The elsevier ID for this record"
         },
         {
           "id":"dataset_alias_id",
@@ -672,8 +666,8 @@
       ]
     },
     {
-      "id":"pda_models",
-      "alias":"Get Pda Models",
+      "id":"dyad_models",
+      "alias":"Get Dyad Models",
       "columns":[
         {
           "id":"id",
@@ -694,7 +688,7 @@
           "description":"A unique ID that identifies which agency run generated this row"
         },
         {
-          "id":"publication_dataset_alias_id",
+          "id":"dyad_id",
           "alias":"Publication Dataset Alias ID",
           "dataType":"int",
           "description":"The ID of the publication dataset alias associated with this record"
@@ -740,12 +734,6 @@
           "alias":"Publication Author ID",
           "dataType":"int",
           "description":"The ID of the publication author for this record"
-        },
-        {
-          "id":"affiliation_id",
-          "alias":"Affiliation ID",
-          "dataType":"int",
-          "description":"The ID of the affiliation for this record"
         }
       ]
     },
@@ -776,18 +764,12 @@
           "alias":"Journal ID",
           "dataType":"int",
           "description":"The ID of the journal for this record"
-        },
-        {
-          "id":"ISSN",
-          "alias":"ISSN",
-          "dataType":"string",
-          "description":"ISSN"
         }
       ]
     },
     {
-      "id":"affiliations",
-      "alias":"Get Affiliations",
+      "id":"publication_affiliations",
+      "alias":"Get Publication Affiliations",
       "columns":[
         {
           "id":"external_id",
