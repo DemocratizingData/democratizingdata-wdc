@@ -734,6 +734,12 @@
           "alias":"Publication Author ID",
           "dataType":"int",
           "description":"The ID of the publication author for this record"
+        },
+        {
+          "id":"publication_affiliation_id",
+          "alias":"Publication Affiliation ID",
+          "dataType":"int",
+          "description":"The ID of the publication affiliation for this record"
         }
       ]
     },
