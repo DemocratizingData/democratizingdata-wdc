@@ -12,7 +12,8 @@ console.log(`Scraping from ${url}`);
 var endpoints = [
   "/topics", "/publications", "/authors", "/agency_runs", "/dataset_aliases", "/models", "/datasets",
   "/asjcs", "/publishers", "/journals", "/publication_authors", "/publication_asjcs", "/publication_topics",
-  "/dyads", "/dyad_models", "/author_affiliations", "/issns", "/publication_affiliations"
+  "/dyads", "/dyad_models", "/author_affiliations", "/issns", "/publication_affiliations",
+  "/publication_dataset_aliases", "/pda_models", "/affiliations"
 ]
 
 

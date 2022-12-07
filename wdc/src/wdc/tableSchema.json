@@ -689,7 +689,7 @@
         },
         {
           "id":"dyad_id",
-          "alias":"Publication Dataset Alias ID",
+          "alias":"Dataset Alias ID",
           "dataType":"int",
           "description":"The ID of the publication dataset alias associated with this record"
         },
@@ -770,6 +770,180 @@
     {
       "id":"publication_affiliations",
       "alias":"Get Publication Affiliations",
+      "columns":[
+        {
+          "id":"external_id",
+          "alias":"External ID",
+          "dataType":"string",
+          "description":"An ID for identifying this record in an external data source"
+        },
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"run_id",
+          "alias":"Run ID",
+          "dataType":"int",
+          "description":"A unique ID that identifies which agency run generated this row"
+        },
+        {
+          "id":"institution_name",
+          "alias":"Institution Name",
+          "dataType":"string",
+          "description":"The name of the institution of this affiliation"
+        },
+        {
+          "id":"address",
+          "alias":"Address",
+          "dataType":"string",
+          "description":"The street address of this affiliation"
+        },
+        {
+          "id":"city",
+          "alias":"City",
+          "dataType":"string",
+          "description":"The name of the city of this affiliation"
+        },
+        {
+          "id":"state",
+          "alias":"State",
+          "dataType":"string",
+          "description":"The state of this affiliation"
+        },
+        {
+          "id":"country_code",
+          "alias":"Country Code",
+          "dataType":"string",
+          "description":"The country code of this affiliation"
+        },
+        {
+          "id":"postal_code",
+          "alias":"Postal Code",
+          "dataType":"string",
+          "description":"The postal code of this affiliation"
+        }
+      ]
+    },
+    {
+      "id":"publication_dataset_aliases",
+      "alias":"Get Publication Dataset Aliases",
+      "columns":[
+        {
+          "id":"publication_id",
+          "alias":"Publication ID",
+          "dataType":"int",
+          "description":"The ID of the associated publication for this record"
+        },
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"run_id",
+          "alias":"Run ID",
+          "dataType":"int",
+          "description":"A unique ID that identifies which agency run generated this row"
+        },
+        {
+          "id":"dataset_alias_id",
+          "alias":"Dataset Alias ID",
+          "dataType":"int",
+          "description":"The ID of the associated dataset alias for this record"
+        },
+        {
+          "id":"alias_id",
+          "alias":"Alias ID",
+          "dataType":"int",
+          "description":"The ID of the associated alias for this record"
+        },
+        {
+          "id":"mention_candidate",
+          "alias":"Mention Candidate",
+          "dataType":"string",
+          "description":"The mention candidate"
+        },
+        {
+          "id":"snippet",
+          "alias":"Snippet",
+          "dataType":"string",
+          "description":"A snippet of text data"
+        },
+        {
+          "id":"is_fuzzy",
+          "alias":"Is Fuzzy",
+          "dataType":"bool",
+          "description":"Flag indicating if this record is fuzzy"
+        },
+        {
+          "id":"fuzzy_score",
+          "alias":"Fuzzy Score",
+          "dataType":"float",
+          "description":"The fuzzy score"
+        }
+      ]
+    },
+    {
+      "id":"pda_models",
+      "alias":"Get Pda Models",
+      "columns":[
+        {
+          "id":"id",
+          "alias":"ID",
+          "dataType":"int",
+          "description":"A unique ID for this row"
+        },
+        {
+          "id":"last_updated_date",
+          "alias":"Last Updated Date",
+          "dataType":"string",
+          "description":"Timestamp of last update"
+        },
+        {
+          "id":"run_id",
+          "alias":"Run ID",
+          "dataType":"int",
+          "description":"A unique ID that identifies which agency run generated this row"
+        },
+        {
+          "id":"dyad_id",
+          "alias":"Dataset Alias ID",
+          "dataType":"int",
+          "description":"The ID of the publication dataset alias associated with this record"
+        },
+        {
+          "id":"model_id",
+          "alias":"Model ID",
+          "dataType":"int",
+          "description":"The model's ID"
+        },
+        {
+          "id":"score",
+          "alias":"Score",
+          "dataType":"float",
+          "description":"The model's score"
+        }
+      ]
+    },
+    {
+      "id":"affiliations",
+      "alias":"Get Affiliations",
       "columns":[
         {
           "id":"external_id",
