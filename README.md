@@ -19,5 +19,6 @@ To run the scraper, and you should always if you're updating WDC.
     - Change the url to whichever site you want to scrape the spec from.
     - You might have to `npm install swagger-parser` if it's not yet installed.
 3. Generated json at [`./wdc/src/wdc/tableSchema.json`](./wdc/src/wdc/tableSchema.json)
-4. Commit said file to this repo to update.
-5. NOTE: `scrape_spec.js` only parses endpoints specified in the `endpoints` variable. Add to the file if new endpoints are created.
+4. Format said json with a json formatter online. Currently use `https://jsonformatter.curiousconcept.com/#`.
+5. Commit said file to this repo to update.
+NOTE: `scrape_spec.js` only parses endpoints specified in the `endpoints` variable. Add to the file if new endpoints are created.
